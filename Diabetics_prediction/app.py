@@ -5,7 +5,7 @@ import pickle
 import matplotlib.pyplot as plt
 
 # Load the machine learning model
-with open(r'Diabetics_prediction\trained_model', 'rb') as file:
+with open(r'Diabetics_prediction\model', 'rb') as file:
     model = pickle.load(file)
 
 # Title of the application

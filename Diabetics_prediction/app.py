@@ -5,8 +5,8 @@ import pickle
 import matplotlib.pyplot as plt
 
 # Load the machine learning model
-with open('model.pkl', 'rb') as file:
-    classifier = pickle.load(file)
+loaded_model = pickle.load(open(r'Diabetics_prediction\model.pkl','rb'))
+
 
 # Title of the application
 st.title("Diabetes Prediction")
@@ -35,7 +35,7 @@ input_data = pd.DataFrame({
 
 # Make prediction
 if st.button('Predict'):
-    prediction = classifier.predict(input_data)[0]
+    prediction = loaded_model.predict(input_data)[0]
     st.write(f"The predicted outcome is: {'Diabetes' if prediction == 1 else 'No Diabetes'}")
     
     # Plot the prediction (binary output)

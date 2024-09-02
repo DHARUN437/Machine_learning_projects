@@ -5,7 +5,7 @@ import pickle
 import matplotlib.pyplot as plt
 
 # Load the machine learning model
-with open(r'Diabetics_prediction\model.pkl', 'rb') as file:
+with open('model.pkl', 'rb') as file:
     classifier = pickle.load(file)
 
 # Title of the application

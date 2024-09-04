@@ -5,7 +5,7 @@ import joblib
 # Load the trained model
 @st.cache_resource
 def load_model():
-    regressor = joblib.load(r'gold_price_prediction\gold_price_model.pkl')
+    regressor = joblib.load('gold_price_prediction\gold_price_model.pkl')
     return regressor
 
 regressor = load_model()

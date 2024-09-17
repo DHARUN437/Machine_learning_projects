@@ -1,12 +1,12 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pickle
+import joblib
 import matplotlib.pyplot as plt
 
-# Load the machine learning model
-loaded_model = pickle.load(open(r'Diabetics_prediction\model.pkl','rb'))
-
+def load_model():
+    regressor = joblib.load(r'Diabetics_prediction\model.pkl','rb')
+    return regressor
 
 # Title of the application
 st.title("Diabetes Prediction")
